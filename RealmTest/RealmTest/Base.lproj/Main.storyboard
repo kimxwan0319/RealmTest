@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EfF-X6-kLC">
+                                <rect key="frame" x="20" y="308" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="old" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Du-SU-bRT">
+                                <rect key="frame" x="20" y="372" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zt2-rT-0tC">
+                                <rect key="frame" x="20" y="436" width="300" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XV-lU-hU9">
+                                <rect key="frame" x="328" y="311" width="66" height="31"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uI4-fQ-osG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4B-Kk-unO">
+                                <rect key="frame" x="325" y="374" width="69" height="31"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Modify"/>
+                                <connections>
+                                    <action selector="oldModifyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ca3-bR-y9F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oK3-gO-wkR">
+                                <rect key="frame" x="168" y="510" width="78" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Register"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcW-bU-687"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0k-bc-3aC">
+                                <rect key="frame" x="179.5" y="561" width="55" height="31"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Print"/>
+                                <connections>
+                                    <action selector="printButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Em-Do-DLG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cg4-Nj-eR8">
+                                <rect key="frame" x="325" y="437.5" width="69" height="31"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Modify"/>
+                                <connections>
+                                    <action selector="nameModifyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDp-Lm-p4U"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Du-SU-bRT" firstAttribute="top" secondItem="4XV-lU-hU9" secondAttribute="bottom" constant="30" id="0aA-to-O7A"/>
+                            <constraint firstItem="cg4-Nj-eR8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0xP-gb-CMD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4XV-lU-hU9" secondAttribute="trailing" constant="20" id="3RD-nY-QFN"/>
+                            <constraint firstItem="b0k-bc-3aC" firstAttribute="top" secondItem="oK3-gO-wkR" secondAttribute="bottom" constant="20" id="5m7-Gd-mRo"/>
+                            <constraint firstItem="Zt2-rT-0tC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CSa-0r-bNF"/>
+                            <constraint firstItem="Zt2-rT-0tC" firstAttribute="top" secondItem="0Du-SU-bRT" secondAttribute="bottom" constant="30" id="CZG-8c-MGk"/>
+                            <constraint firstItem="oK3-gO-wkR" firstAttribute="top" secondItem="Zt2-rT-0tC" secondAttribute="bottom" constant="40" id="DB5-ka-wkw"/>
+                            <constraint firstItem="cg4-Nj-eR8" firstAttribute="leading" secondItem="Zt2-rT-0tC" secondAttribute="trailing" constant="5" id="GSY-D9-ean"/>
+                            <constraint firstItem="cg4-Nj-eR8" firstAttribute="top" secondItem="v4B-Kk-unO" secondAttribute="bottom" constant="32.5" id="GTW-Pm-j7o"/>
+                            <constraint firstItem="4XV-lU-hU9" firstAttribute="leading" secondItem="EfF-X6-kLC" secondAttribute="trailing" constant="8" symbolic="YES" id="P30-Yu-QdV"/>
+                            <constraint firstItem="v4B-Kk-unO" firstAttribute="leading" secondItem="0Du-SU-bRT" secondAttribute="trailing" constant="5" id="RGE-8j-uqg"/>
+                            <constraint firstItem="EfF-X6-kLC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wtk-0s-04X"/>
+                            <constraint firstItem="b0k-bc-3aC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XBq-vo-X4e"/>
+                            <constraint firstItem="Zt2-rT-0tC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ozd-VB-p1e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4B-Kk-unO" secondAttribute="trailing" constant="20" id="pv8-i4-4UO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cg4-Nj-eR8" secondAttribute="trailing" constant="20" id="sWZ-bv-NBP"/>
+                            <constraint firstItem="oK3-gO-wkR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w44-7c-Nv0"/>
+                            <constraint firstItem="0Du-SU-bRT" firstAttribute="top" secondItem="EfF-X6-kLC" secondAttribute="bottom" constant="30" id="yi7-e2-exH"/>
+                            <constraint firstItem="0Du-SU-bRT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zUk-hQ-btb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="EfF-X6-kLC" id="Uc0-wL-dqt"/>
+                        <outlet property="nameTextField" destination="Zt2-rT-0tC" id="zvI-re-9an"/>
+                        <outlet property="oldTextField" destination="0Du-SU-bRT" id="8w6-3j-Mdy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="64.955357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
